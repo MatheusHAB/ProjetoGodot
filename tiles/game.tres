@@ -1,0 +1,233 @@
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://c1exginekjssk"]
+
+[ext_resource type="Texture2D" uid="uid://busn7c223y6db" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="1_dghlq"]
+[ext_resource type="Texture2D" uid="uid://cd7etbmp1sjmk" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/Rock_shape (16 x 16).png" id="1_neijt"]
+[ext_resource type="Texture2D" uid="uid://bq5girvdgc4wf" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="2_8bhj0"]
+[ext_resource type="Texture2D" uid="uid://cm12v3pdqveli" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_ygjk0"]
+[ext_resource type="Texture2D" uid="uid://fbrmxe7a8pc0" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="4_sdnxw"]
+[ext_resource type="Texture2D" uid="uid://b6nmehm67kiqg" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="6_hk6kd"]
+[ext_resource type="Texture2D" uid="uid://dvkl06htns2iu" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/Flowers (16 x 16).png" id="7_dys3x"]
+[ext_resource type="Texture2D" uid="uid://cdgq2usoi2kvb" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/Snack_machine_Bench_Trash_bin (16 x 16).png" id="8_o2w7i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbqvb"]
+texture = ExtResource("1_neijt")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+texture = ExtResource("1_dghlq")
+2:0/0 = 0
+3:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+2:2/0 = 0
+10:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+15:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+2:11/0 = 0
+10:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+2:12/0 = 0
+10:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+1:0/0 = 0
+4:3/size_in_atlas = Vector2i(3, 4)
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
+texture = ExtResource("2_8bhj0")
+0:0/size_in_atlas = Vector2i(18, 2)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
+texture = ExtResource("3_ygjk0")
+0:0/size_in_atlas = Vector2i(18, 13)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
+texture = ExtResource("4_sdnxw")
+1:1/size_in_atlas = Vector2i(3, 3)
+1:1/0 = 0
+5:1/size_in_atlas = Vector2i(3, 3)
+5:1/0 = 0
+9:1/size_in_atlas = Vector2i(3, 1)
+9:1/0 = 0
+15:1/size_in_atlas = Vector2i(3, 1)
+15:1/0 = 0
+9:3/size_in_atlas = Vector2i(4, 1)
+9:3/0 = 0
+14:3/size_in_atlas = Vector2i(5, 2)
+14:3/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22yce"]
+texture = ExtResource("6_hk6kd")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n87oo"]
+texture = ExtResource("7_dys3x")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ix7gb"]
+texture = ExtResource("8_o2w7i")
+1:1/size_in_atlas = Vector2i(2, 2)
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+
+[resource]
+sources/1 = SubResource("TileSetAtlasSource_lbhrr")
+sources/2 = SubResource("TileSetAtlasSource_iywne")
+sources/3 = SubResource("TileSetAtlasSource_p57ef")
+sources/4 = SubResource("TileSetAtlasSource_u5sy4")
+sources/0 = SubResource("TileSetAtlasSource_nbqvb")
+sources/5 = SubResource("TileSetAtlasSource_22yce")
+sources/6 = SubResource("TileSetAtlasSource_n87oo")
+sources/7 = SubResource("TileSetAtlasSource_ix7gb")
