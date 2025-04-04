@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dwhygk7kaaxho"]
+[gd_scene load_steps=4 format=4 uid="uid://dwhygk7kaaxho"]
 
 [ext_resource type="TileSet" uid="uid://c1exginekjssk" path="res://tiles/game.tres" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://v6iee0uhxhr" path="res://entities/player.tscn" id="1_t2xf0"]
-[ext_resource type="PackedScene" uid="uid://bjrgsvb52ywcq" path="res://entities/level_end.tscn" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://dqk1defmt2epx" path="res://entities/camera_2d.tscn" id="5_iywne"]
 [ext_resource type="TileSet" uid="uid://b3h4amw0flnwb" path="res://tiles/terrain.tres" id="5_p57ef"]
 
 [node name="Game" type="Node2D"]
@@ -19,12 +17,3 @@ tile_set = ExtResource("5_p57ef")
 
 [node name="Player" parent="." instance=ExtResource("1_t2xf0")]
 position = Vector2(59, 58)
-
-[node name="LevelEnd" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(444, 106)
-next_level = "GameOver"
-
-[node name="Camera2D" parent="." instance=ExtResource("5_iywne")]
-limit_left = 0
-limit_top = 0
-limit_right = 432

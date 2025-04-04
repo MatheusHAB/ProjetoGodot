@@ -199,7 +199,7 @@ position = Vector2(-1, 0)
 next_level = "forest"
 
 [node name="CollisionShape2D" parent="LevelEnd" index="0"]
-position = Vector2(622, 114)
+position = Vector2(635, 114)
 debug_color = Color(1, 1, 1, 0.419608)
 
 [editable path="LevelEnd"]
