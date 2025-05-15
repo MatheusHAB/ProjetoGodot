@@ -2,14 +2,18 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 70.0
-const JUMP_VELOCITY = -240.0
-
-var jump_count = 0
+const SPEED = 100.0
+const JUMP_VELOCITY = -300.0
 
 @export var max_jump_count = 2
 
+var jump_count = 0
+var was_on_floor: bool = true
+
 func _physics_process(delta: float) -> void:
+	if was_on_floor and not is_on_floor():
+		if jump_count == 0:
+			jump_count = 1
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -20,18 +24,10 @@ func _physics_process(delta: float) -> void:
 		else:
 			anim.play("idle")
 
-	if is_on_wall():
-		jump_count = 0
-
 	# Handle jump.
-	if Input.is_action_just_pressed("jump")  and jump_count < max_jump_count:
-		velocity.y = JUMP_VELOCITY
-		jump_count += 1
-		anim.play("jump")
-
-	if Input.is_action_just_pressed("jump") and is_on_wall():
-		velocity.y = JUMP_VELOCITY
-		anim.play("jump")
+	if Input.is_action_just_pressed("jump") and jump_count < max_jump_count:
+		jump()
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -45,23 +41,35 @@ func _physics_process(delta: float) -> void:
 		anim.flip_h = false
 	elif velocity.x < 0:
 		anim.flip_h = true
+		
 
-
-
+		
 	move_and_slide()
+
+func jump():
+	velocity.y = JUMP_VELOCITY
+	jump_count += 1 
+	anim.play("jump")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("DeathZone"):
-		call_deferred("death_scene")
+		call_deferred("reload_scene")
 	elif area.is_in_group("LevelEnd"):
 		var next_level = area.next_level
 		if next_level:
 			call_deferred("load_scene", next_level)
 		else:
-			push_error("Próxima fase não definida em LevelEnd")
+			push_error("Próxima fase não definida em EndLevel")
+	elif area.is_in_group("Enemies"):
+		if velocity.y > 0: # o player matou o inimigo
+			area.take_damage() # deleta o inimigo
+			jump()
+		else:
+			reload_scene()
+			
 
-func death_scene():
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
-
+func reload_scene():
+	get_tree().reload_current_scene()
+	
 func load_scene(scene_name: String):
 	get_tree().change_scene_to_file("res://scenes/" + scene_name + ".tscn")
