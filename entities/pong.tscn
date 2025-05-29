@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://br1rva75ume7x"]
+
+[ext_resource type="Texture2D" uid="uid://67kiamiroq0h" path="res://sprites/Effects/Projectile_Bubble (8 x 8).png" id="1_jolkf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jolkf"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8r0im"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnksc"]
+atlas = ExtResource("1_jolkf")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epl56"]
+atlas = ExtResource("1_jolkf")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72swc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnksc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epl56")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+z_index = 3
+collision_layer = 8
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_jolkf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 3
+shape = SubResource("CircleShape2D_8r0im")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_72swc")
+animation = &"new_animation"

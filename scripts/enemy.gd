@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-@onready var dead_body: RigidBody2D = $DeadBody
-
-
 enum EnemyState {
 	andando,
 	atacando,

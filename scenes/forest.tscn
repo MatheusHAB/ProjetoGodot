@@ -108,5 +108,5 @@ position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_3knxq")
 
 [node name="LevelEnd" parent="." instance=ExtResource("11_ercsu")]
-position = Vector2(103, 181)
+position = Vector2(874, 181)
 next_level = "tropic"
